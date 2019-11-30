@@ -8,12 +8,13 @@ chainweb:
   mining:
     # Settings for how a Node can provide work for remote miners.
     coordination:
-      enabled: false
+      enabled: true
       # `public` or `private`.
       mode: private
       # The number of `/mining/work` calls that can be made in total over a 5
       # minute period.
-      limit: 1200
+      limit: 1024000
+      mining: 1000000
       # When `mode: private`, this is a list of miner account names who are
       # allowed to have work generated for them.
       miners: []
@@ -26,7 +27,7 @@ chainweb:
     # Pact `/local` calls.
     local: 0.1
     # `/mining/work` calls.
-    mining: 5
+    mining: 1000000
     # `PUT /cut/peer` calls.
     putPeer: 11
 
@@ -45,9 +46,9 @@ chainweb:
       # You.
       hostaddress:
         # This should be your public IP or domain name.
-        hostname: localhost
+        hostname: 104.248.127.202
         # The port you'd like to run the Node on. 443 is a safe default.
-        port: 0
+        port: 443
 
     # When `true`, only communicates with peers specified in the `peers` list.
     # Intended for "focused" catch up.
@@ -63,22 +64,85 @@ chainweb:
     # Initial peers to connect to in order to join the network for the first time.
     # These will share more peers and block data to your Node.
     peers:
-    - address:
-        hostname: us-w1.chainweb.com
-        port: 443
-      id: null
-    - address:
-        hostname: us-e1.chainweb.com
-        port: 443
-      id: null
-    - address:
-        hostname: jp1.chainweb.com
-        port: 443
-      id: null
-    - address:
-        hostname: fr1.chainweb.com
-        port: 443
-      id: null
+      - address:
+          hostname: akami.chainweb.tech
+          port: 443
+        id: null
+      - address:
+          hostname: arboretum.tech
+          port: 443
+        id: null
+      - address:
+          hostname: chainweb.xyz
+          port: 443
+        id: null
+      - address:
+          hostname: tsundere.waifuwars.org
+          port: 35090
+        id: null
+      - address:
+          hostname: kadena1.block77.io
+          port: 443
+        id: null
+      - address:
+          hostname: kadena2.block77.io
+          port: 443
+        id: null
+      - address:
+          hostname: ponzu.banteg.xyz
+          port: 1337
+        id: null
+      - address:
+          hostname: dumpling.banteg.xyz
+          port: 1337
+        id: null- address:
+         hostname: sg.blockventur.es
+          port: 44444
+        id: null
+      - address:
+          hostname: sg.kadena.asymmetry.ventures
+          port: 44444
+        id: null
+      - address:
+          hostname: kadena.wayi.cn
+          port: 443
+        id: null
+      - address:
+          hostname: kadenamerkletree.com
+          port: 443
+        id: null
+      - address:
+          hostname: chungle.constant.gripe
+          port: 1343
+        id: null
+      - address:
+          hostname: fr1.chainweb.com
+          port: 443
+        id: null
+      - address:
+          hostname: pn.hyperioncn.net
+          port: 443
+        id: null
+      - address:
+          hostname: cw.hyperioncn.net
+          port: 443
+        id: null
+      - address:
+          hostname: us-w1.chainweb.com
+          port: 443
+        id: null
+      - address:
+          hostname: us-e1.chainweb.com
+          port: 443
+        id: null
+      - address:
+          hostname: jp1.chainweb.com
+          port: 443
+        id: null
+      - address:
+          hostname: fr1.chainweb.com
+          port: 443
+        id: null
 
   # Related to Cut DB management and synchronization between peers.
   cuts:

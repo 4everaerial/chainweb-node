@@ -29,7 +29,7 @@ chainweb:
       # You.
       hostaddress:
         # This should be your public IP or domain name.
-        hostname: localhost
+        hostname: 104.248.127.202
         # The port you'd like to run the Node on. 443 is a safe default.
         port: 443
 

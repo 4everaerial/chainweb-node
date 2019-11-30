@@ -6,12 +6,12 @@ chainweb:
   mining:
     # Settings for how a Node can provide work for remote miners.
     coordination:
-      enabled: false
+      enabled: true
       # `public` or `private`.
       mode: private
       # The number of `/mining/work` calls that can be made in total over a 5
       # minute period.
-      limit: 1200
+      limit: 12000
       # When `mode: private`, this is a list of miner account names who are
       # allowed to have work generated for them.
       miners: []
@@ -31,25 +31,25 @@ chainweb:
         # This should be your public IP or domain name.
         hostname: localhost
         # The port you'd like to run the Node on. 443 is a safe default.
-        port: 0
+        port: 443
 
     # Initial peers to connect to in order to join the network for the first time.
     # These will share more peers and block data to your Node.
     peers:
     - address:
-        hostname: us-w1.chainweb.com
+        hostname: sg.kadena.asymmetry.ventures
         port: 443
       id: null
     - address:
-        hostname: us-e1.chainweb.com
+        hostname: sg.blockventur.es
         port: 443
       id: null
     - address:
-        hostname: jp1.chainweb.com
+        hostname: strakonice.invictusmining.com
         port: 443
       id: null
     - address:
-        hostname: fr1.chainweb.com
+        hostname: fr3.chainweb.com
         port: 443
       id: null
 
